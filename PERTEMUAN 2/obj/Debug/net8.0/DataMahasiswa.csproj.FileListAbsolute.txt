@@ -1,0 +1,14 @@
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\bin\Debug\net8.0\DataMahasiswa.exe
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\bin\Debug\net8.0\DataMahasiswa.deps.json
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\bin\Debug\net8.0\DataMahasiswa.runtimeconfig.json
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\bin\Debug\net8.0\DataMahasiswa.dll
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\bin\Debug\net8.0\DataMahasiswa.pdb
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\DataMahasiswa.GeneratedMSBuildEditorConfig.editorconfig
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\DataMahasiswa.AssemblyInfoInputs.cache
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\DataMahasiswa.AssemblyInfo.cs
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\DataMahasiswa.csproj.CoreCompileInputs.cache
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\DataMahasiswa.dll
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\refint\DataMahasiswa.dll
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\DataMahasiswa.pdb
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\DataMahasiswa.genruntimeconfig.cache
+E:\CAMPUS\ACADEMIC\SEMESTER 5\PBKK\tugas\PERTEMUAN 2\obj\Debug\net8.0\ref\DataMahasiswa.dll
