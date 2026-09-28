@@ -8,10 +8,9 @@ namespace StudentRegistrationApp
 {
     public partial class MainWindow : Window
     {
-        // Penyimpanan data di memori
+
         private List<Student> daftarMahasiswa = new List<Student>();
 
-        // Menyimpan data yang sedang diedit (null = mode tambah baru)
         private Student sedangDiedit = null;
 
         public MainWindow()
@@ -20,7 +19,6 @@ namespace StudentRegistrationApp
             RefreshList();
         }
 
-        // ===== EVENT: SIMPAN / UPDATE =====
         private void BtnSimpan_Click(object sender, RoutedEventArgs e)
         {
             string nim = txtNim.Text.Trim();
@@ -106,7 +104,7 @@ namespace StudentRegistrationApp
                 return;
             }
 
-            // --- Ambil nilai control ---
+
             string prodi = "";
             if (cmbProdi.SelectedItem is ComboBoxItem item)
             {
@@ -125,10 +123,10 @@ namespace StudentRegistrationApp
 
             DateTime tanggalLahir = dpTanggalLahir.SelectedDate.Value;
 
-            // --- Proses penyimpanan ---
+   
             if (sedangDiedit == null)
             {
-                // Mode TAMBAH
+   
                 Student baru = new Student
                 {
                     Nim = nim,
@@ -150,7 +148,7 @@ namespace StudentRegistrationApp
             }
             else
             {
-                // Mode EDIT
+           
                 sedangDiedit.Nama = nama;
                 sedangDiedit.Prodi = prodi;
                 sedangDiedit.JenisKelamin = jenisKelamin;
@@ -169,13 +167,13 @@ namespace StudentRegistrationApp
             ResetForm();
         }
 
-        // ===== EVENT: RESET =====
+      
         private void BtnReset_Click(object sender, RoutedEventArgs e)
         {
             ResetForm();
         }
 
-        // ===== EVENT: EDIT =====
+       
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (lstMahasiswa.SelectedItem is Student terpilih)
@@ -183,7 +181,7 @@ namespace StudentRegistrationApp
                 sedangDiedit = terpilih;
 
                 txtNim.Text = terpilih.Nim;
-                txtNim.IsEnabled = false; // NIM tidak boleh diubah
+                txtNim.IsEnabled = false; 
                 txtNama.Text = terpilih.Nama;
 
                 foreach (ComboBoxItem cb in cmbProdi.Items)
@@ -211,7 +209,6 @@ namespace StudentRegistrationApp
             }
         }
 
-        // ===== EVENT: HAPUS =====
         private void BtnHapus_Click(object sender, RoutedEventArgs e)
         {
             if (lstMahasiswa.SelectedItem is Student terpilih)
@@ -226,7 +223,7 @@ namespace StudentRegistrationApp
                 {
                     daftarMahasiswa.Remove(terpilih);
 
-                    // Kalau yang dihapus sedang diedit, batalkan mode edit
+                    
                     if (sedangDiedit == terpilih)
                     {
                         ResetForm();
@@ -241,15 +238,13 @@ namespace StudentRegistrationApp
             }
         }
 
-        // ===== EVENT: SEARCH =====
+
         private void TxtCari_TextChanged(object sender, TextChangedEventArgs e)
         {
             RefreshList();
         }
 
-        // ===== METHOD BANTU =====
-
-        // Tampilkan data ke ListBox (sudah difilter search) + update counter
+        
         private void RefreshList()
         {
             if (lstMahasiswa == null || txtCounter == null) return;

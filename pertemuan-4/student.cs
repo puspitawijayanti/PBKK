@@ -12,7 +12,6 @@ namespace StudentRegistrationApp
         public string Alamat { get; set; } = "";
         public string NoTelepon { get; set; } = "";
 
-        // Teks yang tampil di ListBox
         public override string ToString()
         {
             return $"{Nim} | {Nama} | {Prodi} | {JenisKelamin} | " +
