@@ -1,0 +1,128 @@
+body {
+    background-color: #e9ecef;
+    color: #212529;
+    font-size: 0.9rem;
+}
+
+.print-toolbar {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+    z-index: 10;
+}
+
+.sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 1.5rem auto;
+    padding: 18mm 16mm;
+    background-color: #fff;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.sheet-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px double #212529;
+}
+
+.sheet-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.sheet-institution {
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sheet-title {
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.sheet table {
+    width: 100%;
+}
+
+.sheet .table th,
+.sheet .table td {
+    padding: 0.35rem 0.5rem;
+}
+
+.identity td {
+    padding: 0.15rem 0.5rem 0.15rem 0;
+}
+
+.signature {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signature div {
+    width: 40%;
+    text-align: center;
+}
+
+.signature .line {
+    margin-top: 4rem;
+    border-top: 1px solid #212529;
+    padding-top: 0.25rem;
+}
+
+.sheet-footer {
+    margin-top: 2rem;
+    color: #6c757d;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    body {
+        background-color: #fff;
+        font-size: 10.5pt;
+    }
+
+    .print-toolbar {
+        display: none;
+    }
+
+    .sheet {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .table {
+        page-break-inside: auto;
+    }
+
+    .table tr {
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}

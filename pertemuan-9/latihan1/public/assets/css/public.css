@@ -1,0 +1,96 @@
+:root {
+    --lablend-primary: #1f4e8c;
+    --lablend-dark: #13325c;
+    --lablend-accent: #f6b83c;
+}
+
+.bg-lablend {
+    background-color: var(--lablend-primary);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--lablend-primary);
+    --bs-btn-border-color: var(--lablend-primary);
+    --bs-btn-hover-bg: var(--lablend-dark);
+    --bs-btn-hover-border-color: var(--lablend-dark);
+    --bs-btn-active-bg: var(--lablend-dark);
+}
+
+.text-primary {
+    color: var(--lablend-primary) !important;
+}
+
+.hero,
+.welcome-banner {
+    background: linear-gradient(135deg, var(--lablend-dark), var(--lablend-primary));
+}
+
+.hero {
+    margin-top: -1.5rem;
+}
+
+.search-hero .form-control {
+    border: 0;
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.category-card {
+    border: 1px solid #e3e8ef;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.category-card:hover {
+    border-color: var(--lablend-primary);
+    transform: translateY(-2px);
+}
+
+.tool-card .card-img-top {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background-color: #eef2f7;
+}
+
+.tool-card {
+    transition: box-shadow 0.15s ease;
+}
+
+.tool-card:hover {
+    box-shadow: 0 0.5rem 1.25rem rgba(19, 50, 92, 0.15) !important;
+}
+
+.tool-photo {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background-color: #eef2f7;
+}
+
+.step-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8eef7;
+    color: var(--lablend-primary);
+    font-size: 1.5rem;
+}
+
+.contact-list li {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--lablend-primary);
+    border-color: var(--lablend-primary);
+}
