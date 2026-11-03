@@ -55,7 +55,7 @@
                                     <div class="text-muted">Kembali: <?= date_id($loan['returned_at'], true) ?></div>
                                 <?php endif ?>
                             </td>
-                            <td class="small"><?= esc(character_limiter((string) $loan['note'], 60)) ?></td>
+                            <td class="small"><?= esc(character_limiter((string) $loan['note'], 60, '…')) ?></td>
                             <td><?= loan_status_badge($loan['status']) ?></td>
                             <td class="text-right text-nowrap"><?= view('admin/loans/_actions', ['loan' => $loan]) ?></td>
                         </tr>

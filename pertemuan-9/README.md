@@ -99,7 +99,7 @@ Latihan 1 berupa aplikasi LabLend, yaitu sistem peminjaman alat pada Laboratoriu
 | `loans` | `user_id`, `tool_id`, `quantity`, `borrow_date`, `return_date`, `returned_at`, `status` (`pending` / `approved` / `borrowed` / `returned` / `rejected`), `note` |
 | `messages` | pesan dari formulir kontak: `name`, `email`, `subject`, `body` |
 
-Seeder mengisi 14 data pengguna, 10 kategori, 20 alat, 15 peminjaman yang tersebar dalam enam bulan terakhir, dan 10 pesan kontak.
+Seeder mengisi 14 data pengguna, 10 kategori, 20 alat, 15 peminjaman yang tersebar dalam enam bulan terakhir, dan 10 pesan kontak. Setiap alat dilengkapi foto yang bersumber dari Wikimedia Commons. Berkas foto disimpan di `app/Database/Seeds/images/` dan disalin ke `public/uploads/tools/` ketika seeder dijalankan, sedangkan judul, lisensi, dan tautan sumber setiap foto dicatat pada `app/Database/Seeds/images/SUMBER.txt`.
 
 ### 1. Instalasi dan Konfigurasi CI
 
@@ -555,27 +555,47 @@ Seluruh gambar pada bagian ini tersimpan di folder `docs/latihan1/`.
 
 ![Gambar 1. Beranda publik LabLend](docs/latihan1/dashboard.png)
 
-**Gambar 1.** Beranda publik LabLend. Halaman menggunakan layout Bootstrap 5 dengan partial navbar, kolom pencarian, kartu statistik, dan daftar kategori alat (Poin 3).
+**Gambar 1.** Beranda publik LabLend. Halaman menggunakan layout Bootstrap 5 dengan partial navbar, kolom pencarian, dan kartu statistik jumlah jenis alat, unit tersedia, kategori, serta peminjaman tercatat (Poin 3).
 
-![Gambar 2. Formulir pengajuan peminjaman](docs/latihan1/form-loan.png)
+![Gambar 2. Kategori dan alat terbaru pada beranda](docs/latihan1/dashboard-2.png)
 
-**Gambar 2.** Formulir pengajuan peminjaman. Mahasiswa yang telah login mengisi jumlah, tanggal pinjam, tanggal kembali, dan keperluan. Halaman menggunakan layout SB Admin 2 dengan sidebar versi mahasiswa (Poin 4, 5, dan 7).
+**Gambar 2.** Kategori dan alat terbaru pada beranda. Daftar kategori beserta jumlah jenis alat, diikuti kartu alat terbaru yang menampilkan foto, kategori, deskripsi singkat, dan stok (Poin 3 dan 6).
 
-![Gambar 3. Detail pengajuan setelah dikirim](docs/latihan1/form-loan-result.png)
+![Gambar 3. Katalog alat](docs/latihan1/menu-catalog.png)
 
-**Gambar 3.** Detail pengajuan setelah dikirim. Pesan flash keberhasilan dan detail peminjaman dengan status Menunggu Persetujuan. Pengajuan pada status ini masih dapat dibatalkan (Poin 5).
+**Gambar 3.** Katalog alat. Pencarian berdasarkan kata kunci dan filter kategori. Setiap kartu menampilkan foto alat yang tersimpan di `public/uploads/tools/` (Poin 2, 3, dan 6).
 
-![Gambar 4. Riwayat peminjaman mahasiswa](docs/latihan1/loan-history.png)
+![Gambar 4. Detail alat](docs/latihan1/menu-info-alat.png)
 
-**Gambar 4.** Riwayat peminjaman mahasiswa. Daftar hanya memuat peminjaman milik akun yang sedang login, dilengkapi filter status dan pagination (Poin 5 dan 7).
+**Gambar 4.** Detail alat. Halaman detail diakses melalui slug alat. Alat dengan stok kosong menampilkan tombol nonaktif "Stok sedang habis", disertai daftar alat lain pada kategori yang sama (Poin 2 dan 5).
 
-![Gambar 5. Dashboard laboran](docs/latihan1/panel-admin-dashboard.png)
+![Gambar 5. Formulir pengajuan peminjaman](docs/latihan1/form-loan.png)
 
-**Gambar 5.** Dashboard laboran. Kartu statistik, grafik pengajuan per bulan, dan grafik jumlah jenis alat per kategori menggunakan Chart.js. Sidebar menampilkan menu khusus laboran (Poin 4).
+**Gambar 5.** Formulir pengajuan peminjaman. Mahasiswa yang telah login mengisi jumlah, tanggal pinjam, tanggal kembali, dan keperluan. Halaman menggunakan layout SB Admin 2 dengan sidebar versi mahasiswa (Poin 4, 5, dan 7).
 
-![Gambar 6. Pengelolaan peminjaman oleh laboran](docs/latihan1/panel-admin-loan.png)
+![Gambar 6. Detail pengajuan setelah dikirim](docs/latihan1/form-loan-result.png)
 
-**Gambar 6.** Pengelolaan peminjaman oleh laboran. Tab status beserta jumlah data, pencarian, penanda keterlambatan, serta tombol Setujui, Tolak, Serahkan, dan Tandai Kembali yang memperbarui stok dalam satu transaksi (Poin 5 dan 7).
+**Gambar 6.** Detail pengajuan setelah dikirim. Pesan flash keberhasilan dan detail peminjaman dengan status Menunggu Persetujuan. Pengajuan pada status ini masih dapat dibatalkan (Poin 5).
+
+![Gambar 7. Riwayat peminjaman mahasiswa](docs/latihan1/loan-history.png)
+
+**Gambar 7.** Riwayat peminjaman mahasiswa. Daftar hanya memuat peminjaman milik akun yang sedang login, dilengkapi filter status dan pagination (Poin 5 dan 7).
+
+![Gambar 8. Dashboard laboran](docs/latihan1/panel-admin-dashboard.png)
+
+**Gambar 8.** Dashboard laboran. Kartu statistik, grafik pengajuan per bulan, dan grafik jumlah jenis alat per kategori menggunakan Chart.js. Sidebar menampilkan menu khusus laboran (Poin 4).
+
+![Gambar 9. Data alat pada panel laboran](docs/latihan1/admin-tools.png)
+
+**Gambar 9.** Data alat pada panel laboran. CRUD alat dengan pencarian, filter kategori, miniatur foto, indikator stok, dan kondisi alat. Tombol Hapus dikirim melalui form POST yang memuat token CSRF (Poin 5 dan 6).
+
+![Gambar 10. Pengelolaan peminjaman oleh laboran](docs/latihan1/panel-admin-loan.png)
+
+**Gambar 10.** Pengelolaan peminjaman oleh laboran. Tab status beserta jumlah data, pencarian, penanda keterlambatan, serta tombol Setujui, Tolak, Serahkan, dan Tandai Kembali yang memperbarui stok dalam satu transaksi (Poin 5 dan 7).
+
+![Gambar 11. Data pengguna](docs/latihan1/admin-list-user.png)
+
+**Gambar 11.** Data pengguna. Daftar akun laboran dan mahasiswa dengan pencarian dan filter peran. Akun yang sedang login diberi penanda "Anda" dan tidak dapat dihapus oleh dirinya sendiri (Poin 7).
 
 ---
 
@@ -813,25 +833,25 @@ Aturan cetak pada `public/assets/css/print.css`:
 
 Seluruh gambar pada bagian ini tersimpan di folder `docs/latihan2a/`.
 
-![Gambar 7. Dashboard admin SIAKAD](docs/latihan2a/admin-dashboard.png)
+![Gambar 12. Dashboard admin SIAKAD](docs/latihan2a/admin-dashboard.png)
 
-**Gambar 7.** Dashboard admin SIAKAD. Periode aktif dan batas SKS dari `Config\Academic`, jumlah data master, ringkasan per program studi, serta daftar hal yang memerlukan tindak lanjut.
+**Gambar 12.** Dashboard admin SIAKAD. Periode aktif dan batas SKS dari `Config\Academic`, jumlah data master, ringkasan per program studi, serta daftar hal yang memerlukan tindak lanjut.
 
-![Gambar 8. Daftar mata kuliah](docs/latihan2a/admin-list-matkul.png)
+![Gambar 13. Daftar mata kuliah](docs/latihan2a/admin-list-matkul.png)
 
-**Gambar 8.** Daftar mata kuliah. CRUD mata kuliah dengan pencarian, filter program studi, dosen pengampu, jadwal, serta jumlah peserta dibandingkan kuota pada periode aktif.
+**Gambar 13.** Daftar mata kuliah. CRUD mata kuliah dengan pencarian, filter program studi, dosen pengampu, jadwal, serta jumlah peserta dibandingkan kuota pada periode aktif.
 
-![Gambar 9. Dashboard dosen](docs/latihan2a/dosen-dashboard.png)
+![Gambar 14. Dashboard dosen](docs/latihan2a/dosen-dashboard.png)
 
-**Gambar 9.** Dashboard dosen. Jumlah kelas yang diampu, nilai yang belum diisi, jumlah mahasiswa perwalian, serta jadwal mengajar pada semester berjalan.
+**Gambar 14.** Dashboard dosen. Jumlah kelas yang diampu, nilai yang belum diisi, jumlah mahasiswa perwalian, serta jadwal mengajar pada semester berjalan.
 
-![Gambar 10. Daftar kelas yang diampu](docs/latihan2a/dosen-daftar-kelas.png)
+![Gambar 15. Daftar kelas yang diampu](docs/latihan2a/dosen-daftar-kelas.png)
 
-**Gambar 10.** Daftar kelas yang diampu. Halaman hanya menampilkan kelas milik dosen yang sedang login, dilengkapi indikator kuota peserta dan tautan menuju input nilai.
+**Gambar 15.** Daftar kelas yang diampu. Halaman hanya menampilkan kelas milik dosen yang sedang login, dilengkapi indikator kuota peserta dan tautan menuju input nilai.
 
-![Gambar 11. Dashboard mahasiswa](docs/latihan2a/mahasiswa-dashboard.png)
+![Gambar 16. Dashboard mahasiswa](docs/latihan2a/mahasiswa-dashboard.png)
 
-**Gambar 11.** Dashboard mahasiswa. IPK, jumlah SKS yang telah dinilai, SKS semester berjalan dibandingkan batas 24 SKS, profil beserta dosen wali, dan jadwal kuliah berdasarkan KRS.
+**Gambar 16.** Dashboard mahasiswa. IPK, jumlah SKS yang telah dinilai, SKS semester berjalan dibandingkan batas 24 SKS, profil beserta dosen wali, dan jadwal kuliah berdasarkan KRS.
 
 ---
 
@@ -856,7 +876,7 @@ Latihan 2b berupa toko online Kopi Nusantara yang menjual biji kopi dari berbaga
 | `orders` | `user_id`, `code` (format `KN-YYYYMMDD-NNNN`), `status`, data penerima, `subtotal`, `shipping_cost`, `total`, `payment_proof`, `courier`, `tracking_number`, dan waktu tiap tahap (`paid_at`, `verified_at`, `shipped_at`, `completed_at`, `cancelled_at`) |
 | `order_items` | `order_id`, `product_id` (bernilai NULL apabila produk dihapus), salinan `product_name` dan `price` saat checkout, `quantity`, `subtotal` |
 
-Seeder mengisi 11 pengguna, 10 kategori, 24 produk, dan 15 pesanan yang mencakup seluruh status. Pesanan yang telah dibayar dilengkapi gambar bukti transfer contoh yang dibuat menggunakan GD.
+Seeder mengisi 11 pengguna, 10 kategori, 24 produk, dan 15 pesanan yang mencakup seluruh status. Pesanan yang telah dibayar dilengkapi gambar bukti transfer contoh yang dibuat menggunakan GD. Setiap produk dilengkapi foto yang bersumber dari Wikimedia Commons. Berkas foto disimpan di `app/Database/Seeds/images/` dan disalin ke `public/uploads/products/` ketika seeder dijalankan, sedangkan judul, lisensi, dan tautan sumber setiap foto dicatat pada `app/Database/Seeds/images/SUMBER.txt`.
 
 ### Pengunjung dan Pembeli
 
@@ -1008,23 +1028,58 @@ Alur utama status pesanan adalah `awaiting_payment` → `awaiting_verification` 
 
 Seluruh gambar pada bagian ini tersimpan di folder `docs/latihan2b/`.
 
-![Gambar 12. Beranda toko](docs/latihan2b/pembeli-dashboard.png)
+![Gambar 17. Beranda toko](docs/latihan2b/pembeli-dashboard.png)
 
-**Gambar 12.** Beranda toko. Halaman publik Bootstrap 5 yang memuat informasi ongkos kirim Rp15.000 (gratis untuk belanja di atas Rp200.000), kategori, dan produk terbaru. Menu Pesanan Saya muncul karena pembeli telah login.
+**Gambar 17.** Beranda toko. Halaman publik Bootstrap 5 yang memuat informasi ongkos kirim Rp15.000 (gratis untuk belanja di atas Rp200.000), metode pembayaran transfer bank, dan daftar kategori.
 
-![Gambar 13. Katalog produk](docs/latihan2b/pembeli-discover.png)
+![Gambar 18. Produk terbaru pada beranda](docs/latihan2b/pembeli-dashboard-1.png)
 
-**Gambar 13.** Katalog produk. Filter kategori, pencarian, dan pengurutan berdasarkan produk terbaru, harga terendah, harga tertinggi, atau nama. Produk dengan stok kosong diberi label Habis.
+**Gambar 18.** Produk terbaru pada beranda. Bagian "Baru Disangrai" menampilkan foto, kategori, daerah asal, tingkat sangrai, berat, dan harga produk. Produk dengan stok kosong diberi label Habis.
 
-![Gambar 14. Halaman Pesanan Saya](docs/latihan2b/pembeli-katalog.png)
+![Gambar 19. Penyaringan katalog berdasarkan kategori](docs/latihan2b/shorting-search.png)
 
-**Gambar 14.** Halaman Pesanan Saya. Riwayat pesanan pembeli dengan filter status. Pesanan yang sedang dikirim menampilkan nama kurir dan nomor resi.
+**Gambar 19.** Penyaringan katalog berdasarkan kategori. Katalog yang difilter pada kategori Cold Brew. Panel kiri menampilkan jumlah produk per kategori, sedangkan bagian atas menyediakan pencarian dan pilihan urutan.
 
-![Gambar 15. Dashboard admin toko](docs/latihan2b/admin-dashboard.png)
+![Gambar 20. Keranjang belanja](docs/latihan2b/keranjang.png)
 
-**Gambar 15.** Dashboard admin toko. Omzet bulan berjalan, total omzet, pesanan yang perlu diverifikasi atau siap dikirim, grafik omzet per bulan, jumlah pesanan per status, produk terlaris, dan stok yang menipis.
+**Gambar 20.** Keranjang belanja. Session hanya menyimpan ID produk dan jumlah, sedangkan harga dan stok dibaca ulang dari basis data setiap kali keranjang dibuka. Ringkasan belanja menunjukkan bahwa pesanan memperoleh gratis ongkir.
 
-![Gambar 16. Pengelolaan pesanan](docs/latihan2b/admin-pesanan.png)
+![Gambar 21. Halaman checkout](docs/latihan2b/form-order.png)
 
-**Gambar 16.** Pengelolaan pesanan. Daftar pesanan dengan tab status, pencarian, total tagihan, dan nomor resi. Tombol Kelola membuka halaman verifikasi pembayaran dan pengisian resi.
+**Gambar 21.** Halaman checkout. Formulir alamat pengiriman yang terisi otomatis dari profil pembeli, ringkasan pesanan, dan informasi pembayaran melalui transfer bank.
 
+![Gambar 22. Pesanan berhasil dibuat](docs/latihan2b/form-order-2.png)
+
+**Gambar 22.** Pesanan berhasil dibuat. Pesanan berstatus Menunggu Pembayaran beserta rincian produk, total tagihan, nomor rekening tujuan, formulir unggah bukti transfer, dan tombol pembatalan.
+
+![Gambar 23. Bukti transfer telah diunggah](docs/latihan2b/form-order-3.png)
+
+**Gambar 23.** Bukti transfer telah diunggah. Status pesanan berubah menjadi Menunggu Verifikasi. Gambar bukti transfer ditampilkan melalui controller yang memeriksa kepemilikan pesanan.
+
+![Gambar 24. Halaman Pesanan Saya](docs/latihan2b/pembeli-katalog.png)
+
+**Gambar 24.** Halaman Pesanan Saya. Riwayat pesanan pembeli dengan filter status. Pesanan yang sedang dikirim menampilkan nama kurir dan nomor resi.
+
+![Gambar 25. Dashboard admin toko](docs/latihan2b/admin-dashboard.png)
+
+**Gambar 25.** Dashboard admin toko. Omzet bulan berjalan, total omzet, pesanan yang perlu diverifikasi atau siap dikirim, grafik omzet per bulan, jumlah pesanan per status, produk terlaris, dan stok yang menipis.
+
+![Gambar 26. Data produk pada panel admin](docs/latihan2b/admin-list-kopi.png)
+
+**Gambar 26.** Data produk pada panel admin. CRUD produk dengan pencarian, filter kategori, pengurutan, miniatur foto, harga, indikator stok, dan status aktif.
+
+![Gambar 27. Pengelolaan pesanan](docs/latihan2b/admin-pesanan.png)
+
+**Gambar 27.** Pengelolaan pesanan. Daftar pesanan dengan tab status, pencarian, total tagihan, dan nomor resi. Tombol Kelola membuka halaman detail pesanan.
+
+![Gambar 28. Verifikasi pembayaran oleh admin](docs/latihan2b/admin-pesanan-2.png)
+
+**Gambar 28.** Verifikasi pembayaran oleh admin. Detail pesanan berstatus Menunggu Verifikasi dengan item hasil snapshot saat checkout, data pengiriman, dan bukti transfer. Admin dapat memverifikasi, menolak bukti, atau membatalkan pesanan.
+
+![Gambar 29. Pengisian kurir dan nomor resi](docs/latihan2b/admin-pesanan-3.png)
+
+**Gambar 29.** Pengisian kurir dan nomor resi. Setelah pembayaran diverifikasi, status berubah menjadi Diproses dan admin mengisi kurir serta nomor resi untuk mengirim pesanan.
+
+![Gambar 30. Pesanan dalam pengiriman](docs/latihan2b/admin-pesanan-4.png)
+
+**Gambar 30.** Pesanan dalam pengiriman. Status berubah menjadi Dikirim dan data kurir beserta nomor resi tercatat pada pesanan. Tindakan yang tersisa hanya Tandai Selesai sesuai alur `OrderModel::FLOW`.

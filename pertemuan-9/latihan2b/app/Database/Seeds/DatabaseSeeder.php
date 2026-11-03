@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
 
         $this->db->enableForeignKeyChecks();
 
-        foreach (glob(WRITEPATH . 'uploads/payments/*') ?: [] as $file) {
+        foreach (array_merge(glob(WRITEPATH . 'uploads/payments/*') ?: [], glob(FCPATH . 'uploads/products/*') ?: []) as $file) {
             if (basename($file) !== 'index.html') {
                 unlink($file);
             }

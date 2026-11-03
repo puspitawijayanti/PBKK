@@ -64,18 +64,19 @@ class CatalogSeeder extends Seeder
         $base = strtotime('-200 days');
 
         foreach ($products as $index => [$category, $name, $origin, $process, $roast, $weight, $price, $stock, $description]) {
+            $slug = url_title($name, '-', true);
             $timestamp = date('Y-m-d H:i:s', $base + $index * 7 * 86400);
             $rows[] = [
                 'category_id' => $categoryIds[$category],
                 'name'        => $name,
-                'slug'        => url_title($name, '-', true),
+                'slug'        => $slug,
                 'origin'      => $origin,
                 'process'     => $process,
                 'roast_level' => $roast,
                 'weight_gram' => $weight,
                 'price'       => $price,
                 'stock'       => $stock,
-                'photo'       => null,
+                'photo'       => $this->copyPhoto($slug),
                 'description' => $description,
                 'is_active'   => 1,
                 'created_at'  => $timestamp,
@@ -84,5 +85,25 @@ class CatalogSeeder extends Seeder
         }
 
         $this->db->table('products')->insertBatch($rows);
+    }
+
+    private function copyPhoto(string $slug): ?string
+    {
+        $source = __DIR__ . '/images/' . $slug . '.jpg';
+
+        if (! is_file($source)) {
+            return null;
+        }
+
+        $directory = FCPATH . 'uploads/products/';
+
+        if (! is_dir($directory)) {
+            mkdir($directory, 0775, true);
+        }
+
+        $name = 'seed-' . $slug . '.jpg';
+        copy($source, $directory . $name);
+
+        return $name;
     }
 }

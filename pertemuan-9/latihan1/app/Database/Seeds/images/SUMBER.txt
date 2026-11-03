@@ -1,0 +1,104 @@
+Sumber gambar data contoh (Wikimedia Commons)
+
+Seluruh gambar diunduh dari Wikimedia Commons, diperkecil, dan dipotong menjadi 800 x 600 piksel.
+Lisensi mengikuti halaman asli masing-masing berkas.
+
+arduino-uno-r3.jpg
+  Judul   : File:Arduino Uno - R3.jpg
+  Lisensi : CC BY 2.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Arduino_Uno_-_R3.jpg
+
+bor-listrik-mini.jpg
+  Judul   : File:Dremel 4200 - 2018-01-31 (3).jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Dremel_4200_-_2018-01-31_(3).jpg
+
+esp32-devkit-v1.jpg
+  Judul   : File:ESP32 Dev Board.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:ESP32_Dev_Board.jpg
+
+kacamata-pelindung-dan-sarung-tangan.jpg
+  Judul   : File:Laboratory protection goggles-blue.jpg
+  Lisensi : CC BY-SA 3.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Laboratory_protection_goggles-blue.jpg
+
+kamera-mirrorless-sony-a6400.jpg
+  Judul   : File:2022-02-17 Sony alpha 6400 IMG20220217210008.jpg
+  Lisensi : CC BY-SA 3.0 de
+  Sumber  : https://commons.wikimedia.org/wiki/File:2022-02-17_Sony_alpha_6400_IMG20220217210008.jpg
+
+kit-robot-line-follower.jpg
+  Judul   : File:40365 Line Follower Robot.jpg
+  Lisensi : CC BY 2.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:40365_Line_Follower_Robot.jpg
+
+kit-sensor-37-in-1.jpg
+  Judul   : File:Arduino Uno with 5DOF Sensor and Breadboard Rewired.jpg
+  Lisensi : CC BY-SA 3.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Arduino_Uno_with_5DOF_Sensor_and_Breadboard_Rewired.jpg
+
+lcr-meter-de-5000.jpg
+  Judul   : File:Generic Chinese LC-meter, around 2000 (1).jpg
+  Lisensi : CC0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Generic_Chinese_LC-meter,_around_2000_(1).jpg
+
+lengan-robot-6-dof.jpg
+  Judul   : File:KUKA industrial robotic arm performing "The Beach" by Roy Nachum - 06.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:KUKA_industrial_robotic_arm_performing_%22The_Beach%22_by_Roy_Nachum_-_06.jpg
+
+multimeter-digital-sanwa-cd800a.jpg
+  Judul   : File:2017 Cyfrowy miernik uniwersalny.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:2017_Cyfrowy_miernik_uniwersalny.jpg
+
+osiloskop-digital-rigol-ds1054z.jpg
+  Judul   : File:RIGOL DS1054Z Digital Storage Oscilloscope.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:RIGOL_DS1054Z_Digital_Storage_Oscilloscope.jpg
+
+power-supply-dc-30v-5a.jpg
+  Judul   : File:Bench power supply.jpg
+  Lisensi : CC0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Bench_power_supply.jpg
+
+proyektor-epson-eb-x500.jpg
+  Judul   : File:EPSON CH-TW5400 LCD PROJECTOR.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:EPSON_CH-TW5400_LCD_PROJECTOR.jpg
+
+raspberry-pi-4-model-b-4gb.jpg
+  Judul   : File:Raspberry Pi 4 Model B - Side.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Side.jpg
+
+router-mikrotik-hap-ac2.jpg
+  Judul   : File:Mikrotik Wireless Router 2.jpg
+  Lisensi : CC BY-SA 3.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Mikrotik_Wireless_Router_2.jpg
+
+sensor-ultrasonik-hc-sr04.jpg
+  Judul   : File:SparkFun HC-SR04 Ultrasonic-Sensor 13959-01a.jpg
+  Lisensi : CC BY 2.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:SparkFun_HC-SR04_Ultrasonic-Sensor_13959-01a.jpg
+
+set-lensa-dan-bangku-optik.jpg
+  Judul   : File:Banc optique - pièces.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Banc_optique_-_pi%C3%A8ces.jpg
+
+solder-station-hakko-fx-888d.jpg
+  Judul   : File:Soldering Station 375A+.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Soldering_Station_375A%2B.jpg
+
+switch-cisco-catalyst-2960.jpg
+  Judul   : File:Cisco 6509.JPG
+  Lisensi : CC BY 3.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Cisco_6509.JPG
+
+tang-crimping-rj45-dan-tester.jpg
+  Judul   : File:Cable stripper, cable tester (RJ45, RJ11), LSA-Tool and crimping tool.jpg
+  Lisensi : CC BY 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Cable_stripper,_cable_tester_(RJ45,_RJ11),_LSA-Tool_and_crimping_tool.jpg

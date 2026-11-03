@@ -38,14 +38,15 @@ class ToolSeeder extends Seeder
         $base = strtotime('-180 days');
 
         foreach ($tools as $index => [$name, $category, $stock, $condition, $description]) {
+            $slug = url_title($name, '-', true);
             $timestamp = date('Y-m-d H:i:s', $base + $index * 8 * 86400);
             $rows[] = [
                 'category_id' => $categoryIds[$category],
                 'name'        => $name,
-                'slug'        => url_title($name, '-', true),
+                'slug'        => $slug,
                 'stock'       => $stock,
                 'condition'   => $condition,
-                'photo'       => null,
+                'photo'       => $this->copyPhoto($slug),
                 'description' => $description,
                 'created_at'  => $timestamp,
                 'updated_at'  => $timestamp,
@@ -53,5 +54,25 @@ class ToolSeeder extends Seeder
         }
 
         $this->db->table('tools')->insertBatch($rows);
+    }
+
+    private function copyPhoto(string $slug): ?string
+    {
+        $source = __DIR__ . '/images/' . $slug . '.jpg';
+
+        if (! is_file($source)) {
+            return null;
+        }
+
+        $directory = FCPATH . 'uploads/tools/';
+
+        if (! is_dir($directory)) {
+            mkdir($directory, 0775, true);
+        }
+
+        $name = 'seed-' . $slug . '.jpg';
+        copy($source, $directory . $name);
+
+        return $name;
     }
 }

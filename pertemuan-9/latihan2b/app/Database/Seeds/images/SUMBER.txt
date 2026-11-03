@@ -1,0 +1,124 @@
+Sumber gambar data contoh (Wikimedia Commons)
+
+Seluruh gambar diunduh dari Wikimedia Commons, diperkecil, dan dipotong menjadi 800 x 600 piksel.
+Lisensi mengikuti halaman asli masing-masing berkas.
+
+bubuk-toraja-kalosi.jpg
+  Judul   : File:Coffee powdered.jpg
+  Lisensi : CC BY-SA 3.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Coffee_powdered.jpg
+
+cold-brew-coarse-ground.jpg
+  Judul   : File:Maple Cream Cold Brew - Trading Post Coffee Roasters 2026-07-16.jpg
+  Lisensi : CC0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Maple_Cream_Cold_Brew_-_Trading_Post_Coffee_Roasters_2026-07-16.jpg
+
+decaf-sumatra.jpg
+  Judul   : File:Coffee Beans, color (28183654506).jpg
+  Lisensi : CC0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Coffee_Beans,_color_(28183654506).jpg
+
+drip-bag-java-preanger.jpg
+  Judul   : File:Coffee Pour Over Setup.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Coffee_Pour_Over_Setup.jpg
+
+drip-bag-sampler-arabika.jpg
+  Judul   : File:Coffee of Mucugê Latitude 13.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Coffee_of_Mucug%C3%AA_Latitude_13.jpg
+
+flores-bajawa.jpg
+  Judul   : File:WAE - Women sorting coffee beans in Wae Rebo, Flores, Indonesia, 2019.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:WAE_-_Women_sorting_coffee_beans_in_Wae_Rebo,_Flores,_Indonesia,_2019.jpg
+
+gayo-anaerobic-micro-lot.jpg
+  Judul   : File:Cascara, Coffee cherry tea-6467.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Cascara,_Coffee_cherry_tea-6467.jpg
+
+gayo-wine-process.jpg
+  Judul   : File:Kopi Hitam King Gayo Arabika.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Kopi_Hitam_King_Gayo_Arabika.jpg
+
+java-preanger.jpg
+  Judul   : File:Coffea arabica 3.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Coffea_arabica_3.jpg
+
+kerinci-red-honey.jpg
+  Judul   : File:Sweet Taste of Bitterness.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Sweet_Taste_of_Bitterness.jpg
+
+kintamani-natural.jpg
+  Judul   : File:Bali Coffee anyone? Hand pounded and toasted to perfection. (2690580806).jpg
+  Lisensi : CC BY-SA 2.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Bali_Coffee_anyone%3F_Hand_pounded_and_toasted_to_perfection._(2690580806).jpg
+
+konsentrat-cold-brew-1-liter.jpg
+  Judul   : File:Cold Brew Coffee.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Cold_Brew_Coffee.jpg
+
+kopi-susu-blend.jpg
+  Judul   : File:Es kopi susu kekinian di Yogyakarta, Indonesia.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Es_kopi_susu_kekinian_di_Yogyakarta,_Indonesia.jpg
+
+kopi-tubruk-aceh.jpg
+  Judul   : File:Mendoan dan Kopi Tubruk.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Mendoan_dan_Kopi_Tubruk.jpg
+
+liberika-kayong.jpg
+  Judul   : File:Size Comparison Racemosa Bean Liberica Bean Arabica Bean.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Size_Comparison_Racemosa_Bean_Liberica_Bean_Arabica_Bean.jpg
+
+liberika-meranti.jpg
+  Judul   : File:Liberica coffee beans, roasted.jpg
+  Lisensi : CC BY 3.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Liberica_coffee_beans,_roasted.jpg
+
+mandailing-giling-basah.jpg
+  Judul   : File:Kopi Robusta Sidikalang.jpg
+  Lisensi : CC BY 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Kopi_Robusta_Sidikalang.jpg
+
+nusantara-espresso-blend.jpg
+  Judul   : File:Espresso BW 1.jpg
+  Lisensi : Public domain
+  Sumber  : https://commons.wikimedia.org/wiki/File:Espresso_BW_1.jpg
+
+paket-hampers-nusantara.jpg
+  Judul   : File:Coffee Shop with burlap bags.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Coffee_Shop_with_burlap_bags.jpg
+
+papua-wamena.jpg
+  Judul   : File:Agribusiness Project Papua - Coffee Cooperative (5510821649).jpg
+  Lisensi : Public domain
+  Sumber  : https://commons.wikimedia.org/wiki/File:Agribusiness_Project_Papua_-_Coffee_Cooperative_(5510821649).jpg
+
+robusta-dampit.jpg
+  Judul   : File:Roasted coffee beans.jpg
+  Lisensi : Public domain
+  Sumber  : https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans.jpg
+
+robusta-lampung-fine.jpg
+  Judul   : File:Dülmen, Privatrösterei Schröer -- 2018 -- 2.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Privatr%C3%B6sterei_Schr%C3%B6er_--_2018_--_2.jpg
+
+robusta-temanggung.jpg
+  Judul   : File:Beans Drying Coffee Robusta Balamuri Coorg Feb24 A7C 09491.jpg
+  Lisensi : CC BY-SA 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Beans_Drying_Coffee_Robusta_Balamuri_Coorg_Feb24_A7C_09491.jpg
+
+toraja-sapan.jpg
+  Judul   : File:Roasted Robusta Coffee from Toraja Indonesia.jpg
+  Lisensi : CC BY 4.0
+  Sumber  : https://commons.wikimedia.org/wiki/File:Roasted_Robusta_Coffee_from_Toraja_Indonesia.jpg

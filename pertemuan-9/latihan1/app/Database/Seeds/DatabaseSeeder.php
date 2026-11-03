@@ -16,6 +16,12 @@ class DatabaseSeeder extends Seeder
 
         $this->db->enableForeignKeyChecks();
 
+        foreach (glob(FCPATH . 'uploads/tools/*') ?: [] as $file) {
+            if (basename($file) !== 'index.html') {
+                unlink($file);
+            }
+        }
+
         $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(ToolSeeder::class);
