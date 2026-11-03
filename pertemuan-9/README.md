@@ -583,7 +583,7 @@ Seluruh gambar pada bagian ini tersimpan di folder `docs/latihan1/`.
 
 Latihan 2a berupa Sistem Informasi Akademik (SIAKAD) dengan tiga peran, yaitu `admin`, `lecturer`, dan `student`. Seluruh peran masuk melalui `/login` dan diarahkan ke dashboard masing-masing. Seluruh halaman menggunakan template SB Admin 2.
 
-**Akun demo** (http://localhost:8082/login)
+**Akun demo** 
 
 | Peran | Username | Password | Catatan |
 |---|---|---|---|
@@ -839,7 +839,7 @@ Seluruh gambar pada bagian ini tersimpan di folder `docs/latihan2a/`.
 
 Latihan 2b berupa toko online Kopi Nusantara yang menjual biji kopi dari berbagai daerah di Indonesia. Pengunjung dapat berbelanja tanpa akun hingga tahap checkout, pembeli (`buyer`) menyelesaikan pembayaran, dan admin mengelola katalog serta pesanan.
 
-**Akun demo** (http://localhost:8083/login)
+**Akun demo** 
 
 | Peran | Email | Password |
 |---|---|---|
