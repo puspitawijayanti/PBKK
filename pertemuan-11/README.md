@@ -346,7 +346,7 @@ Semua skenario dijalankan lewat browser (Microsoft Edge, 1366×768) secara berur
 
 ## 4. Pengujian Otomatis
 
-`tests/functional/run_tests.py` menjalankan 118 uji *black-box* lewat HTTP dan memverifikasinya langsung ke database. Cakupannya 12 skenario studi kasus, uji keamanan, dan uji *race condition* (dua checkout bersamaan untuk stok 1). Daftar lengkapnya ada di [`docs/PENGUJIAN.md`](docs/PENGUJIAN.md).
+`tests/functional/run_tests.py` menjalankan 118 uji *black-box* lewat HTTP dan memverifikasinya langsung ke database. Cakupannya 12 skenario studi kasus, uji keamanan, dan uji *race condition* (dua checkout bersamaan untuk stok 1).
 
 ```bash
 php spark migrate:refresh -f && php spark db:seed DatabaseSeeder
@@ -402,7 +402,7 @@ app/
 public/uploads/products/          foto produk
 writable/uploads/payments/        bukti pembayaran (privat)
 database/db_shopease.sql          struktur + data awal
-docs/                             ERD.md, PENGUJIAN.md
+docs/                             ERD.md
 tests/functional/run_tests.py     uji fungsional & keamanan (118 uji)
 ```
 
