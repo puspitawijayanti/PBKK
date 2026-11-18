@@ -4,3 +4,4 @@ obj/
 *.userosscache
 *.suo
 .vs/
+.env

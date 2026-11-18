@@ -1,0 +1,58 @@
+:root {
+  --se-primary: #4f46e5;
+  --se-primary-dark: #4338ca;
+  --se-ink: #1f2340;
+  --se-muted: #6b7088;
+  --se-bg: #f6f7fb;
+  --bs-primary: #4f46e5;
+  --bs-primary-rgb: 79, 70, 229;
+  --bs-link-color: #4f46e5;
+  --bs-link-color-rgb: 79, 70, 229;
+  --bs-link-hover-color: #4338ca;
+  --bs-link-hover-color-rgb: 67, 56, 202;
+}
+body { background: var(--se-bg); color: var(--se-ink); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.btn-primary { --bs-btn-bg: var(--se-primary); --bs-btn-border-color: var(--se-primary); --bs-btn-hover-bg: var(--se-primary-dark); --bs-btn-hover-border-color: var(--se-primary-dark); --bs-btn-active-bg: var(--se-primary-dark); --bs-btn-active-border-color: var(--se-primary-dark); --bs-btn-disabled-bg: var(--se-primary); --bs-btn-disabled-border-color: var(--se-primary); }
+.btn-outline-primary { --bs-btn-color: var(--se-primary); --bs-btn-border-color: var(--se-primary); --bs-btn-hover-bg: var(--se-primary); --bs-btn-hover-border-color: var(--se-primary); --bs-btn-active-bg: var(--se-primary); }
+.text-primary { color: var(--se-primary) !important; }
+.bg-primary { background-color: var(--se-primary) !important; }
+.page-item.active .page-link { background-color: var(--se-primary); border-color: var(--se-primary); }
+.page-link { color: var(--se-primary); }
+.form-control:focus, .form-select:focus { border-color: #a5a0f5; box-shadow: 0 0 0 .2rem rgba(79,70,229,.18); }
+
+.se-nav { background: #fff; border-bottom: 1px solid #e6e8f2; }
+.se-brand { font-weight: 800; letter-spacing: -.02em; color: var(--se-primary) !important; font-size: 1.35rem; }
+.se-brand span { color: var(--se-ink); }
+.se-hero { background: linear-gradient(120deg, #4f46e5 0%, #7c3aed 60%, #db2777 120%); color: #fff; border-radius: 1.25rem; }
+.se-hero .btn-light { color: var(--se-primary-dark); font-weight: 600; }
+.se-card { background: #fff; border: 1px solid #e6e8f2; border-radius: 1rem; }
+.se-section-title { font-weight: 700; letter-spacing: -.01em; }
+
+.product-card { border: 1px solid #e6e8f2; border-radius: 1rem; overflow: hidden; background: #fff; transition: transform .15s, box-shadow .15s; height: 100%; }
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(31,35,64,.10); }
+.product-card .thumb { aspect-ratio: 4 / 3; width: 100%; object-fit: cover; background: #eef0f6; display: block; }
+.product-card .name { font-weight: 600; color: var(--se-ink); text-decoration: none; }
+.product-card .name:hover { color: var(--se-primary); }
+.price { font-weight: 700; color: var(--se-primary); }
+.chip { display: inline-block; padding: .35rem .8rem; border-radius: 99px; background: #fff; border: 1px solid #dfe2f0; color: var(--se-ink); text-decoration: none; font-size: .9rem; }
+.chip:hover, .chip.active { background: var(--se-primary); color: #fff; border-color: var(--se-primary); }
+
+.cart-thumb { width: 64px; height: 64px; object-fit: cover; border-radius: .6rem; background: #eef0f6; }
+.footer { color: var(--se-muted); font-size: .9rem; }
+
+/* admin */
+.admin-side { background: #fff; border: 1px solid #e6e8f2; border-radius: 1rem; padding: .75rem; }
+.admin-side .nav-link { color: var(--se-ink); border-radius: .6rem; padding: .55rem .8rem; font-weight: 500; }
+.admin-side .nav-link:hover { background: #f0f1fb; }
+.admin-side .nav-link.active { background: var(--se-primary); color: #fff; }
+.admin-side .nav-heading { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--se-muted); padding: .6rem .8rem .2rem; }
+.stat-card { border-radius: 1rem; border: 1px solid #e6e8f2; background: #fff; padding: 1.1rem 1.25rem; height: 100%; }
+.stat-card .label { color: var(--se-muted); font-size: .85rem; }
+.stat-card .value { font-size: 1.6rem; font-weight: 800; letter-spacing: -.02em; }
+.table > :not(caption) > * > * { vertical-align: middle; }
+.table-thumb { width: 48px; height: 48px; object-fit: cover; border-radius: .5rem; background: #eef0f6; }
+.timeline { list-style: none; padding-left: 0; margin: 0; }
+.timeline li { position: relative; padding: 0 0 1rem 1.4rem; border-left: 2px solid #dfe2f0; margin-left: .35rem; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 3px; width: 12px; height: 12px; border-radius: 50%; background: var(--se-primary); border: 2px solid #fff; box-shadow: 0 0 0 1px #dfe2f0; }
+.timeline li:last-child { border-left-color: transparent; }
+@media (max-width: 991.98px) { .admin-side .nav { flex-direction: row !important; flex-wrap: wrap; } .admin-side .nav-heading { width: 100%; } }

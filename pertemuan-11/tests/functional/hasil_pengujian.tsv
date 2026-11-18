@@ -1,0 +1,119 @@
+ID	Skenario	Hasil
+T01	Registrasi customer valid; password tersimpan sebagai hash	LULUS
+T01b	Registrasi dengan email yang sudah dipakai ditolak	LULUS
+T01c	Password tanpa angka ditolak (kebijakan password)	LULUS
+T01d	Mass assignment role=admin saat registrasi diabaikan	LULUS
+T02a	Login admin -> dashboard admin	LULUS
+T02b	Login operator -> dashboard (menu terbatas)	LULUS
+T02c	Login customer -> beranda toko	LULUS
+T03	Login password salah ditolak; pesan sama untuk email tak terdaftar	LULUS
+T04a	Akses /admin tanpa login -> diarahkan ke login	LULUS
+T04b	Customer membuka /admin -> 403	LULUS
+T04c	Customer membuka /admin/products -> 403	LULUS
+T04d	Operator membuka /admin/products (admin saja) -> 403	LULUS
+T04e	Operator membuka verifikasi pembayaran -> 403 (BR-007)	LULUS
+T04f	Admin membuka /cart (khusus customer) -> 403	LULUS
+T04g	Operator boleh membuka daftar pesanan	LULUS
+T04h	Logout lewat GET tidak diizinkan (hanya POST+CSRF)	LULUS
+T05	POST tanpa token CSRF ditolak	LULUS
+T06a	Admin menambah kategori	LULUS
+T06b	Validasi kategori: nama < 3 karakter ditolak	LULUS
+T06c	Nama kategori duplikat ditolak	LULUS
+T06d	Admin mengubah kategori	LULUS
+T06e	Hapus kategori yang masih punya produk ditolak	LULUS
+T06f	Hapus kategori kosong berhasil	LULUS
+T07a	Admin menambah produk + upload gambar valid (nama file acak)	LULUS
+T07b	Produk baru tampil pada daftar admin	LULUS
+T07c	Admin mengubah data produk	LULUS
+T08a	Upload .txt ditolak	LULUS
+T08b	Upload skrip PHP (.php) ditolak	LULUS
+T08c	File PHP menyamar jadi .png ditolak (cek MIME/isi file)	LULUS
+T08d	Gambar GIF (format tidak diizinkan) ditolak	LULUS
+T08e	Gambar > 2 MB ditolak	LULUS
+T08f	Tidak ada produk tambahan tersimpan dari upload berbahaya	LULUS
+T09a	Validasi: harga negatif ditolak	LULUS
+T09b	Validasi: stok negatif ditolak	LULUS
+T10a	Hapus produk yang belum dipakai -> terhapus	LULUS
+T10b	Hapus produk yang sudah pernah dipesan -> dinonaktifkan (riwayat aman)	LULUS
+T11a	Pencarian produk	LULUS
+T11b	Filter kategori + urut harga naik	LULUS
+T11c	Pagination tampil (8 produk/halaman)	LULUS
+T11d	Produk nonaktif tidak tampil di katalog (BR-002)	LULUS
+T11e	Detail produk nonaktif -> 404	LULUS
+T11f	Input pencarian di-escape (anti XSS)	LULUS
+T12a	Tamu melihat detail produk, tombol aksi meminta login	LULUS
+T12b	Tamu tidak bisa menambah ke keranjang (redirect/blokir)	LULUS
+T12c	Customer menambah produk ke keranjang	LULUS
+T12d	Menambah produk yang sama menggabungkan kuantitas	LULUS
+T12e	Kuantitas 0 ditolak	LULUS
+T12f	Kuantitas melebihi stok ditolak	LULUS
+T12g	Ubah kuantitas di keranjang	LULUS
+T12h	Ubah kuantitas > stok ditolak	LULUS
+T12i	Subtotal = harga x kuantitas (5 x 299.000 = 1.495.000)	LULUS
+T12j	Customer lain tidak bisa menghapus item keranjang orang lain (404)	LULUS
+T13a	Checkout stok cukup -> order & order_items dibuat	LULUS
+T13b	Total dihitung ulang di backend (abaikan total/harga dari browser)	LULUS
+T13c	Snapshot nama & harga tersimpan di order_items	LULUS
+T13d	Stok dikurangi saat pesanan dikonfirmasi	LULUS
+T13e	Keranjang dikosongkan setelah checkout	LULUS
+T13f	Pembayaran awal 'unpaid' & status pesanan 'pending_payment'	LULUS
+T13g	Harga katalog berubah tetapi riwayat pesanan tetap (snapshot)	LULUS
+T14a	Checkout melebihi stok ditolak dengan pesan jelas	LULUS
+T14b	Stok tidak berubah & tidak ada order baru	LULUS
+T14c	Checkout dengan keranjang kosong ditolak	LULUS
+T14d	Checkout dengan alamat milik customer lain ditolak	LULUS
+T14e	Checkout tanpa memilih alamat ditolak (validasi)	LULUS
+T15a	Customer lain tidak dapat melihat pesanan milik orang lain (404)	LULUS
+T15b	Pemilik dapat melihat pesanannya	LULUS
+T15c	Customer lain tidak dapat membatalkan pesanan orang lain	LULUS
+T15d	Customer lain tidak dapat mengunggah bukti ke pesanan orang lain	LULUS
+T16a	Unggah bukti bukan gambar ditolak	LULUS
+T16b	Unggah skrip PHP sebagai bukti ditolak	LULUS
+T16c	Unggah bukti valid -> file tersimpan, status menunggu verifikasi	LULUS
+T16d	Bukti pembayaran disimpan di luar folder public (writable/uploads/payments)	LULUS
+T16e	Pemilik dapat melihat bukti pembayaran	LULUS
+T16f	Customer lain tidak dapat melihat bukti pembayaran (404)	LULUS
+T16g	Operator tidak dapat melihat bukti pembayaran (404)	LULUS
+T16h	Admin dapat melihat bukti pembayaran	LULUS
+T16i	Tamu tidak dapat melihat bukti pembayaran	LULUS
+T16j	Unggah ulang saat menunggu verifikasi ditolak	LULUS
+T17a	Operator tidak dapat memverifikasi pembayaran (403)	LULUS
+T17b	Admin menolak bukti -> pembayaran 'rejected', pesanan kembali 'pending_payment'	LULUS
+T17c	Customer melihat alasan penolakan & dapat unggah ulang	LULUS
+T17d	Unggah ulang setelah ditolak berhasil	LULUS
+T17e	Admin menyetujui -> pembayaran 'verified', pesanan 'processing'; verifier & waktu tercatat	LULUS
+T17f	Verifikasi ulang pada pembayaran yang sudah diverifikasi ditolak	LULUS
+T18a	Customer tidak dapat membatalkan sendiri pesanan yang sudah dibayar	LULUS
+T18b	Operator tidak dapat membatalkan pesanan (403)	LULUS
+T18c	Validasi nomor resi minimal 5 karakter	LULUS
+T18d	Operator mengisi kurir & resi -> status 'shipped'	LULUS
+T18e	Customer melihat info pengiriman (kurir & resi)	LULUS
+T18f	Customer lain tidak dapat menyelesaikan pesanan orang lain	LULUS
+T18g	Customer mengonfirmasi diterima -> 'completed'	LULUS
+T18h	Pesanan 'completed' tidak dapat dibatalkan (transisi tidak valid)	LULUS
+T18i	Setiap perubahan status tercatat di log (waktu + pengguna)	LULUS
+T18j	Tidak ada rute hapus fisik pesanan (BR-011)	LULUS
+T19a	Tidak bisa mengirim pesanan yang belum dibayar (state machine)	LULUS
+T19b	Tidak bisa verifikasi tanpa bukti pembayaran	LULUS
+T19c	Customer membatalkan pesanan 'pending_payment' -> stok dikembalikan	LULUS
+T19d	Admin membatalkan pesanan 'processing' -> status 'cancelled' & stok kembali	LULUS
+T20a	Operator dapat memperbarui stok	LULUS
+T20b	Stok negatif ditolak	LULUS
+T21a	Dashboard admin menampilkan statistik & grafik	LULUS
+T21b	Laporan penjualan berdasarkan periode	LULUS
+T21c	Laporan difilter berdasarkan status	LULUS
+T21d	Ekspor laporan CSV	LULUS
+T21e	Admin melihat daftar pelanggan	LULUS
+T21f	Antrean pengiriman tampil	LULUS
+T21g	Daftar pembayaran tampil	LULUS
+T22a	Pesanan tidak ada -> 404	LULUS
+T22b	Injeksi SQL pada URL tidak berpengaruh (/orders/1' OR '1'='1)	GAGAL
+T22b	Injeksi SQL pada URL tidak berpengaruh (/product/' OR 1=1 --)	GAGAL
+T22c	Injeksi SQL pada pencarian aman (tidak error)	LULUS
+T22d	Header keamanan hadir (X-Content-Type-Options / X-Frame-Options)	LULUS
+T22e	Cookie session & CSRF diset HttpOnly	LULUS
+T22f	Folder uploads tidak mengizinkan listing direktori	LULUS
+T22g	Bukti pembayaran tidak dapat diakses langsung lewat URL publik	LULUS
+T22h	Folder writable tidak terekspos	LULUS
+T22i	.env tidak terekspos	LULUS
+T23	Dua checkout bersamaan untuk stok 1: tepat satu pesanan terbentuk, stok tidak negatif	LULUS
