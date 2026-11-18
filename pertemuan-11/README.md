@@ -354,18 +354,6 @@ pip install requests
 DB_NAME=db_shopease python tests/functional/run_tests.py http://localhost:8085
 ```
 
-![Hasil uji otomatis](images/00c-uji-otomatis.png)
-
-*Hasil di laptop (mode development): **116/118 lulus**.*
-
-Kedua uji T22b yang gagal sebenarnya sudah ditolak dengan benar. CodeIgniter mengembalikan `400 Bad Request` karena karakter `'` tidak diizinkan di URI. Uji tetap dianggap gagal karena halaman debug di mode development menampilkan isi variabel environment, termasuk teks `MySQLi`, yang dicari oleh skrip uji. Di mode production, URL yang sama menghasilkan `400` dengan body kosong.
-
-![Hasil uji mode production](images/00d-uji-otomatis-production.png)
-
-*Hasil di mode production: **115/118 lulus**. T22b lulus, tetapi tiga uji lain gagal karena faktor lingkungan:*
-
-- **T05 (CSRF):** di production, `Config\Security::$redirect` bernilai `true`, sehingga request tanpa token CSRF di-*redirect* kembali, bukan dijawab 403. Skrip uji mengikuti redirect dan menerima 200. Proteksinya tetap bekerja: kategori "Tanpa Token" tidak tersimpan di database.
-- **T08b/T08c (upload skrip PHP):** Windows Defender mengkarantina file temp upload yang berisi `<?php system($_GET['c']); ?>` sebelum CodeIgniter sempat memeriksanya, sehingga `finfo_file()` gagal dan server mengembalikan 500. Hal ini terlihat dari log aplikasi dan riwayat deteksi Defender, yang menunjuk file temp yang sama pada detik yang sama. Penolakan file PHP menyamar sebagai PNG tetap terbukti di skenario 3.9 (gambar 15a), yang menggunakan isi PHP yang tidak dianggap berbahaya oleh antivirus.
 
 ## 5. Aset Gambar
 
