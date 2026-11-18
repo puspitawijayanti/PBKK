@@ -25,6 +25,7 @@ body { background: var(--se-bg); color: var(--se-ink); font-family: system-ui, -
 .se-brand span { color: var(--se-ink); }
 .se-hero { background: linear-gradient(120deg, #4f46e5 0%, #7c3aed 60%, #db2777 120%); color: #fff; border-radius: 1.25rem; }
 .se-hero .btn-light { color: var(--se-primary-dark); font-weight: 600; }
+.se-hero-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 1rem; box-shadow: 0 18px 40px rgba(20,16,70,.28); transform: rotate(2deg); }
 .se-card { background: #fff; border: 1px solid #e6e8f2; border-radius: 1rem; }
 .se-section-title { font-weight: 700; letter-spacing: -.01em; }
 

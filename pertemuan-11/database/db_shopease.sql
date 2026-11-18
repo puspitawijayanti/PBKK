@@ -315,23 +315,23 @@ CREATE TABLE `products` (
 
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` VALUES
-(1,1,'Wireless Headphone','wireless-headphone','Headphone Bluetooth 5.3 dengan noise reduction dan baterai hingga 30 jam.',299000.00,19,'seed-wireless-headphone.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(2,1,'Smart Watch','smart-watch','Jam tangan digital dengan pemantau detak jantung, langkah, dan notifikasi.',450000.00,9,'seed-smart-watch.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(3,1,'Power Bank 20000 mAh','power-bank-20000-mah','Power bank fast charging dengan dua port USB dan satu USB-C.',235000.00,24,'seed-power-bank-20000-mah.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
-(4,1,'Speaker Bluetooth Mini','speaker-bluetooth-mini','Speaker portabel tahan percikan air dengan suara jernih dan bass kuat.',275000.00,13,'seed-speaker-bluetooth-mini.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
-(5,2,'Sneakers Casual','sneakers-casual','Sepatu casual pria yang nyaman untuk aktivitas sehari-hari.',350000.00,14,'seed-sneakers-casual.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
-(6,2,'Kaos Polos Premium','kaos-polos-premium','Kaos katun combed 30s, adem, lembut, dan tidak mudah melar.',89000.00,38,'seed-kaos-polos-premium.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(7,2,'Jaket Hoodie','jaket-hoodie','Hoodie fleece tebal dengan kantong depan dan tali serut.',245000.00,18,'seed-jaket-hoodie.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
-(8,2,'Celana Chino','celana-chino','Celana chino slim fit dengan bahan stretch yang nyaman.',199000.00,22,'seed-celana-chino.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(9,3,'Tas Ransel Urban','tas-ransel-urban','Ransel anti air dengan slot laptop 15 inci dan banyak kompartemen.',275000.00,12,'seed-tas-ransel-urban.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(10,3,'Topi Baseball','topi-baseball','Topi baseball bordir dengan strap belakang yang dapat diatur.',65000.00,34,'seed-topi-baseball.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(11,3,'Dompet Kulit','dompet-kulit','Dompet kulit sintetis premium dengan banyak slot kartu.',129000.00,3,'seed-dompet-kulit.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(12,3,'Kacamata Hitam','kacamata-hitam','Kacamata hitam lensa polarized dengan proteksi UV400.',150000.00,17,'seed-kacamata-hitam.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(13,4,'Botol Minum Stainless','botol-minum-stainless','Botol minum 750 ml menjaga suhu dingin 24 jam dan panas 12 jam.',85000.00,29,'seed-botol-minum-stainless.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
-(14,4,'Lampu Meja LED','lampu-meja-led','Lampu belajar LED dengan 3 tingkat kecerahan dan port USB.',120000.00,15,'seed-lampu-meja-led.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
-(15,4,'Mug Keramik','mug-keramik','Mug keramik 350 ml, aman untuk microwave dan mesin cuci piring.',45000.00,47,'seed-mug-keramik.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
-(16,4,'Set Tempat Makan','set-tempat-makan','Set tempat makan 3 sekat bebas BPA dengan penutup rapat.',175000.00,0,'seed-set-tempat-makan.svg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
-(17,1,'Earphone Kabel Lama','earphone-kabel-lama','Produk lama yang sudah tidak dijual (contoh produk nonaktif).',59000.00,8,'seed-earphone-kabel-lama.svg','inactive','2026-11-18 21:24:03','2026-11-18 21:24:03');
+(1,1,'Wireless Headphone','wireless-headphone','Headphone Bluetooth 5.3 dengan noise reduction dan baterai hingga 30 jam.',299000.00,19,'seed-wireless-headphone.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(2,1,'Smart Watch','smart-watch','Jam tangan digital dengan pemantau detak jantung, langkah, dan notifikasi.',450000.00,9,'seed-smart-watch.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(3,1,'Power Bank 20000 mAh','power-bank-20000-mah','Power bank fast charging dengan dua port USB dan satu USB-C.',235000.00,24,'seed-power-bank-20000-mah.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
+(4,1,'Speaker Bluetooth Mini','speaker-bluetooth-mini','Speaker portabel tahan percikan air dengan suara jernih dan bass kuat.',275000.00,13,'seed-speaker-bluetooth-mini.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
+(5,2,'Sneakers Casual','sneakers-casual','Sepatu casual pria yang nyaman untuk aktivitas sehari-hari.',350000.00,14,'seed-sneakers-casual.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
+(6,2,'Kaos Polos Premium','kaos-polos-premium','Kaos katun combed 30s, adem, lembut, dan tidak mudah melar.',89000.00,38,'seed-kaos-polos-premium.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(7,2,'Jaket Hoodie','jaket-hoodie','Hoodie fleece tebal dengan kantong depan dan tali serut.',245000.00,18,'seed-jaket-hoodie.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
+(8,2,'Celana Chino','celana-chino','Celana chino slim fit dengan bahan stretch yang nyaman.',199000.00,22,'seed-celana-chino.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(9,3,'Tas Ransel Urban','tas-ransel-urban','Ransel anti air dengan slot laptop 15 inci dan banyak kompartemen.',275000.00,12,'seed-tas-ransel-urban.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(10,3,'Topi Baseball','topi-baseball','Topi baseball bordir dengan strap belakang yang dapat diatur.',65000.00,34,'seed-topi-baseball.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(11,3,'Dompet Kulit','dompet-kulit','Dompet kulit sintetis premium dengan banyak slot kartu.',129000.00,3,'seed-dompet-kulit.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(12,3,'Kacamata Hitam','kacamata-hitam','Kacamata hitam lensa polarized dengan proteksi UV400.',150000.00,17,'seed-kacamata-hitam.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(13,4,'Botol Minum Stainless','botol-minum-stainless','Botol minum 750 ml menjaga suhu dingin 24 jam dan panas 12 jam.',85000.00,29,'seed-botol-minum-stainless.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
+(14,4,'Lampu Meja LED','lampu-meja-led','Lampu belajar LED dengan 3 tingkat kecerahan dan port USB.',120000.00,15,'seed-lampu-meja-led.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
+(15,4,'Mug Keramik','mug-keramik','Mug keramik 350 ml, aman untuk microwave dan mesin cuci piring.',45000.00,47,'seed-mug-keramik.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:04'),
+(16,4,'Set Tempat Makan','set-tempat-makan','Set tempat makan 3 sekat bebas BPA dengan penutup rapat.',175000.00,0,'seed-set-tempat-makan.jpg','active','2026-11-18 21:24:03','2026-11-18 21:24:03'),
+(17,1,'Earphone Kabel Lama','earphone-kabel-lama','Produk lama yang sudah tidak dijual (contoh produk nonaktif).',59000.00,8,'seed-earphone-kabel-lama.jpg','inactive','2026-11-18 21:24:03','2026-11-18 21:24:03');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 DROP TABLE IF EXISTS `shipments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

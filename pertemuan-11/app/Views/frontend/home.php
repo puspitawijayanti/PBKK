@@ -9,6 +9,9 @@
             <p class="lead mb-4">Temukan elektronik, fashion, aksesoris, dan banyak lagi. Pesan sekarang, bayar dengan transfer, pantau pesanan Anda hingga sampai.</p>
             <a href="<?= site_url('catalog') ?>" class="btn btn-light btn-lg">Mulai Belanja</a>
         </div>
+        <div class="col-md-4 d-none d-md-block">
+            <img src="<?= base_url('assets/img/hero-flatlay.jpg') ?>" alt="Koleksi fashion dan aksesoris ShopEase" class="se-hero-img">
+        </div>
     </div>
 </section>
 

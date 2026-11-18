@@ -92,7 +92,7 @@ Semua skenario dijalankan lewat browser (Microsoft Edge, 1366×768) secara berur
 
 ![Beranda](images/01-home.png)
 
-*Beranda untuk tamu: banner, daftar kategori, produk terbaru, dan produk unggulan. Produk dengan stok 0 diberi label "Stok habis".*
+*Beranda untuk tamu: banner dengan foto flat lay, daftar kategori, produk terbaru, dan produk terlaris. Semua produk memakai foto asli dengan latar terang dan netral (lihat [Aset Gambar](#5-aset-gambar)). Produk dengan stok 0 diberi label "Stok habis".*
 
 ![Katalog dengan filter](images/02-katalog-filter.png)
 
@@ -204,7 +204,7 @@ Semua skenario dijalankan lewat browser (Microsoft Edge, 1366×768) secara berur
 
 ![Form tambah produk](images/13a-admin-form-tambah-produk.png)
 
-*Skenario 4: form tambah produk "Matras Yoga" beserta foto PNG.*
+*Skenario 4: form tambah produk "Matras Yoga" beserta fotonya (JPG).*
 
 ![Produk tersimpan](images/13b-admin-produk-tersimpan.png)
 
@@ -367,7 +367,35 @@ Kedua uji T22b yang gagal sebenarnya sudah ditolak dengan benar. CodeIgniter men
 - **T05 (CSRF):** di production, `Config\Security::$redirect` bernilai `true`, sehingga request tanpa token CSRF di-*redirect* kembali, bukan dijawab 403. Skrip uji mengikuti redirect dan menerima 200. Proteksinya tetap bekerja: kategori "Tanpa Token" tidak tersimpan di database.
 - **T08b/T08c (upload skrip PHP):** Windows Defender mengkarantina file temp upload yang berisi `<?php system($_GET['c']); ?>` sebelum CodeIgniter sempat memeriksanya, sehingga `finfo_file()` gagal dan server mengembalikan 500. Hal ini terlihat dari log aplikasi dan riwayat deteksi Defender, yang menunjuk file temp yang sama pada detik yang sama. Penolakan file PHP menyamar sebagai PNG tetap terbukti di skenario 3.9 (gambar 15a), yang menggunakan isi PHP yang tidak dianggap berbahaya oleh antivirus.
 
-## 5. Struktur Proyek
+## 5. Aset Gambar
+
+Gambar produk awalnya berupa ilustrasi inisial. Sekarang semuanya diganti dengan foto produk asli yang dipilih dengan gaya seragam: foto studio atau flat lay dengan latar putih, abu muda, atau krem, dan nuansa netral yang serasi dengan warna utama aplikasi (indigo). Setiap foto di-crop ke rasio 4:3 (1200×900, JPEG) sesuai kartu produk, lalu disimpan sebagai `public/uploads/products/seed-<slug>.jpg`. `ProductSeeder` dan `database/db_shopease.sql` otomatis memakai file tersebut. Banner beranda memakai `public/assets/img/hero-flatlay.jpg`.
+
+Semua foto berasal dari [Pexels](https://www.pexels.com/license/) dan [Unsplash](https://unsplash.com/license). Keduanya gratis untuk penggunaan komersial maupun nonkomersial tanpa wajib atribusi, tetapi sumbernya tetap dicantumkan di sini:
+
+| Produk | Sumber | Tautan |
+|---|---|---|
+| Wireless Headphone | Pexels | [www.pexels.com/photo/3394650/](https://www.pexels.com/photo/3394650/) |
+| Smart Watch | Unsplash | [images.unsplash.com/photo-1523275335684-37898b6baf30](https://images.unsplash.com/photo-1523275335684-37898b6baf30) |
+| Power Bank 20000 mAh | Pexels | [www.pexels.com/photo/4072683/](https://www.pexels.com/photo/4072683/) |
+| Speaker Bluetooth Mini | Unsplash | [unsplash.com/photos/Fj7l30GcAEQ](https://unsplash.com/photos/Fj7l30GcAEQ) |
+| Sneakers Casual | Pexels | [www.pexels.com/photo/1461048/](https://www.pexels.com/photo/1461048/) |
+| Kaos Polos Premium | Pexels | [www.pexels.com/photo/12039633/](https://www.pexels.com/photo/12039633/) |
+| Jaket Hoodie | Pexels | [www.pexels.com/photo/9594667/](https://www.pexels.com/photo/9594667/) |
+| Celana Chino | Pexels | [www.pexels.com/photo/11990104/](https://www.pexels.com/photo/11990104/) |
+| Tas Ransel Urban | Unsplash | [images.unsplash.com/photo-1553062407-98eeb64c6a62](https://images.unsplash.com/photo-1553062407-98eeb64c6a62) |
+| Topi Baseball | Unsplash | [images.unsplash.com/photo-1588850561407-ed78c282e89b](https://images.unsplash.com/photo-1588850561407-ed78c282e89b) |
+| Dompet Kulit | Unsplash | [unsplash.com/photos/chB-ff0cgCU](https://unsplash.com/photos/chB-ff0cgCU) |
+| Kacamata Hitam | Unsplash | [images.unsplash.com/photo-1511499767150-a48a237f0083](https://images.unsplash.com/photo-1511499767150-a48a237f0083) |
+| Botol Minum Stainless | Unsplash | [images.unsplash.com/photo-1602143407151-7111542de6e8](https://images.unsplash.com/photo-1602143407151-7111542de6e8) |
+| Lampu Meja LED | Pexels | [www.pexels.com/photo/7193653/](https://www.pexels.com/photo/7193653/) |
+| Mug Keramik | Unsplash | [images.unsplash.com/photo-1514228742587-6b1558fcca3d](https://images.unsplash.com/photo-1514228742587-6b1558fcca3d) |
+| Set Tempat Makan | Pexels | [www.pexels.com/photo/13968346/](https://www.pexels.com/photo/13968346/) |
+| Earphone Kabel Lama | Pexels | [www.pexels.com/photo/983831/](https://www.pexels.com/photo/983831/) |
+| Banner beranda (flat lay) | Pexels | [www.pexels.com/photo/9065153/](https://www.pexels.com/photo/9065153/) |
+| Matras Yoga (dipakai saat uji upload) | Pexels | [www.pexels.com/photo/7318664/](https://www.pexels.com/photo/7318664/) |
+
+## 6. Struktur Proyek
 
 ```
 app/
@@ -392,7 +420,7 @@ tests/functional/run_tests.py     uji fungsional & keamanan (118 uji)
 
 ERD dalam format Mermaid tersedia di [`docs/ERD.md`](docs/ERD.md).
 
-## 6. Keamanan yang Diterapkan
+## 7. Keamanan yang Diterapkan
 
 - Password di-hash dengan `password_hash`, dan percobaan login dibatasi (*throttling*). Session dibuat ulang saat login, dan logout hanya lewat POST + CSRF.
 - CSRF aktif global, ada validasi di server, `esc()` pada semua output, dan Query Builder untuk mencegah SQL injection.

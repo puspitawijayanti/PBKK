@@ -41,7 +41,7 @@ class ProductSeeder extends Seeder
         $now = date('Y-m-d H:i:s');
         foreach ($products as [$catSlug, $name, $desc, $price, $stock, $status]) {
             $slug  = url_title($name, '-', true);
-            $image = is_file(FCPATH . "uploads/products/seed-{$slug}.svg") ? "seed-{$slug}.svg" : null;
+            $image = is_file(FCPATH . "uploads/products/seed-{$slug}.jpg") ? "seed-{$slug}.jpg" : null;
 
             $this->db->table('products')->insert([
                 'category_id' => $cat[$catSlug],
